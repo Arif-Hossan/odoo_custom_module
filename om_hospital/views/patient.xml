@@ -28,11 +28,15 @@
         </field>
     </record>
 
-    <record id="patient_form" model="ir.ui.view">
+    <record id="view_patient_form" model="ir.ui.view">
         <field name="name">hospital.patient.form</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                  <field name="state" widget="statusbar" options="{'clickable':'1'}"
+                  statusbar_visible="draft,done,confirm"/>
+                </header>
                 <sheet>
                     <group>
                         <group>
@@ -58,6 +62,7 @@
                 <field name="gender"/>
                 <field name="age"/>
                 <field name="note"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>

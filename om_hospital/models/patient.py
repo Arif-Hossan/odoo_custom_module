@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models
 
+
 class HospitalPatient(models.Model):
     _name = "hospital.patient"
     _description = "Hospital Patient Information"
@@ -13,3 +14,8 @@ class HospitalPatient(models.Model):
         ('other', 'Other'),
     ], required=True, default='male')
     note = fields.Text(string='Description')
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('confirm', 'Confirmed'),
+        ('done', 'Done'),
+        ('cancel', 'Cancelled')], default="draft", string="Status")
