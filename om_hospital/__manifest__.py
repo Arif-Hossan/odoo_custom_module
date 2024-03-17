@@ -9,7 +9,7 @@
     'category': 'Productivity',
     'website': 'http://arkap.ezyro.com/',
     'images': [],
-    'depends': ['sale'],
+    'depends': ['sale', 'mail'],
     'data': [
         'security/ir.model.access.csv',
         'views/patient.xml',
