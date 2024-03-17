@@ -20,7 +20,7 @@
         <field name="name">Patients</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.patient</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">tree,kanban,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first patient
@@ -48,6 +48,7 @@
                     <group>
                         <group>
                             <field name="name"/>
+                            <field name="responsible_id"/>
                             <field name="note"/>
                         </group>
                         <group>
@@ -72,6 +73,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="responsible_id"/>
                 <field name="gender"/>
                 <field name="age"/>
                 <field name="note"/>
@@ -105,6 +107,7 @@
             <kanban class="o_kanban_badge">
                 <field name="id"/>
                 <field name="name"/>
+                <field name="responsible_id"/>
                 <field name="gender"/>
                 <field name="age"/>
                 <field name="note"/>
