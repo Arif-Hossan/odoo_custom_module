@@ -25,8 +25,13 @@ class HospitalPatient(models.Model):
     def action_confirm(self):
         self.state = 'confirm'
 
+    # def action_done(self):
+    #     if self.state == 'draft' or self.state == 'confirm':
+    #         self.state = 'done'
     def action_done(self):
-        self.state = 'done'
+        for record in self:
+            if record.state in ('draft', 'confirm'):
+                record.state = 'done'
 
     def action_draft(self):
         self.state = 'draft'

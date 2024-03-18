@@ -72,6 +72,9 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <tree>
+                <header>
+                    <button name="action_done" string="Done" type="object"/>
+                </header>
                 <field name="name"/>
                 <field name="responsible_id"/>
                 <field name="gender"/>
